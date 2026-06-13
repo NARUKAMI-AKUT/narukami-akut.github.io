@@ -3,6 +3,8 @@ description: 個人開発者ブランド NARUKAMI AKUT のホームページ
 url: "https://narukami-akut.github.io"
 baseurl: ""
 
+google_analytics_id: "G-5BR1XBW7BW"
+
 collections:
   apps:
     output: true
