@@ -1,0 +1,25 @@
+title: NARUKAMI AKUT
+description: 個人開発者ブランド NARUKAMI AKUT のホームページ
+url: "https://narukami-akut.github.io"
+baseurl: ""
+
+collections:
+  apps:
+    output: true
+    permalink: /apps/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "apps"
+    values:
+      layout: "app"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
