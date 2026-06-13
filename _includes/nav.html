@@ -1,0 +1,20 @@
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="{{ '/' | relative_url }}">NARUKAMI AKUT</a>
+    <button class="nav-toggle" type="button" aria-label="メニュー">☰</button>
+    <ul class="nav-links">
+      <li><a href="{{ '/#home' | relative_url }}">HOME</a></li>
+      <li><a href="{{ '/#about' | relative_url }}">ABOUT</a></li>
+      <li class="nav-dropdown">
+        <a href="{{ '/#products' | relative_url }}">PRODUCTS</a>
+        <ul class="dropdown-menu">
+          {% assign apps = site.apps | sort: "order" %}
+          {% for app in apps %}
+          <li><a href="{{ app.url | relative_url }}">{{ app.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li><a href="{{ '/#contact' | relative_url }}">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
