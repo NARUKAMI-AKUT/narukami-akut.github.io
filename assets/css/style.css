@@ -181,3 +181,48 @@ a {
     flex-wrap: wrap;
   }
 }
+
+/* App pages */
+.app-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.app-header-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.screenshots {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.screenshots img {
+  height: 280px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
