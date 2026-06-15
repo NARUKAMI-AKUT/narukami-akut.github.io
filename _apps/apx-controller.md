@@ -11,6 +11,9 @@ updates:
 tagline: Audio Precision APx500 リモートコントロールGUI（Windows）
 icon: /assets/images/apx-controller/icon.png
 feature_graphic: /assets/images/apx-controller/feature.png
+screenshots:
+  - /assets/images/apx-controller/ss1.png
+  - /assets/images/apx-controller/ss2.png
 cta_label: ダウンロード
 cta_url: https://github.com/NARUKAMI-AKUT/APx500-Controller
 privacy_url: https://narukami-akut.github.io/APx-Controller-site/privacy_policy.html
