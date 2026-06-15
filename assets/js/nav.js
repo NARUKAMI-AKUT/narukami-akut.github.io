@@ -17,4 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	}
+
+	var mailLink = document.getElementById("contact-mail");
+	if (mailLink) {
+		var email = mailLink.dataset.mail.split("").reverse().join("");
+		mailLink.href = "mailto:" + email;
+		mailLink.querySelector("span").textContent = email;
+	}
+
+	var lightbox = document.getElementById("lightbox");
+	if (lightbox) {
+		var lightboxImg = lightbox.querySelector("img");
+		document.querySelectorAll(".screenshots img").forEach((img) => {
+			img.addEventListener("click", () => {
+				lightboxImg.src = img.src;
+				lightboxImg.alt = img.alt;
+				lightbox.classList.add("open");
+			});
+		});
+		lightbox.addEventListener("click", () => {
+			lightbox.classList.remove("open");
+		});
+	}
 });

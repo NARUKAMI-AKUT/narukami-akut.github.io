@@ -7,4 +7,5 @@ icon: /assets/images/remindo/icon.png
 feature_graphic: /assets/images/remindo/feature.png
 ---
 
-リマインダー機能を中心とした生産性向上アプリです。現在開発中で、Android / iOS同時リリースを予定しています。
+リマインド機能を中心とした子育て世代向けのToDoアプリです。<br>
+現在Android向けに開発中です。

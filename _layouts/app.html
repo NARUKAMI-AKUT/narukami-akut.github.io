@@ -2,7 +2,7 @@
 layout: default
 ---
 {% if page.feature_graphic %}
-<div class="hero">
+<div class="hero app-hero">
   <img src="{{ page.feature_graphic | relative_url }}" alt="{{ page.name }}">
 </div>
 {% endif %}
@@ -28,20 +28,42 @@ layout: default
 
 {% if page.screenshots %}
 <section class="section">
-  <h2>スクリーンショット</h2>
+  <img class="section-heading" src="{{ '/assets/images/brand/headings/screenshots.png' | relative_url }}" alt="SCREENSHOTS">
   <div class="screenshots">
     {% for ss in page.screenshots %}
     <img src="{{ ss | relative_url }}" alt="{{ page.name }} screenshot">
     {% endfor %}
   </div>
 </section>
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
 {% endif %}
 
-{% if page.privacy_url %}
 <section class="section">
-  <h2>プライバシーポリシー</h2>
+  <img class="section-heading" src="{{ '/assets/images/brand/headings/privacy-policy.png' | relative_url }}" alt="PRIVACY POLICY">
+  {% if page.privacy_url %}
   <p><a href="{{ page.privacy_url }}" target="_blank" rel="noopener">プライバシーポリシーを見る</a></p>
+  {% else %}
+  <p>準備中です。</p>
+  {% endif %}
 </section>
-{% endif %}
+
+<section class="section">
+  <img class="section-heading" src="{{ '/assets/images/brand/headings/changelog.png' | relative_url }}" alt="CHANGELOG">
+  {% if page.release_date %}
+  <div class="timeline-item">
+    <div class="timeline-marker">
+      <div class="timeline-dot"></div>
+    </div>
+    <div class="timeline-content">
+      <div class="timeline-date">{{ page.release_date }}</div>
+      <div class="timeline-title">{% if page.status == 'internal' %}配布開始{% else %}リリース{% endif %}</div>
+    </div>
+  </div>
+  {% else %}
+  <p>準備中です。</p>
+  {% endif %}
+</section>
 
 </div>
