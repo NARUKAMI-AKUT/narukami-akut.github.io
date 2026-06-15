@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -57,12 +61,35 @@ a {
 }
 
 .section {
+  position: relative;
   padding: 32px 0;
   border-top: 1px solid var(--border);
+  scroll-margin-top: 64px;
 }
 
 .section:first-of-type {
   border-top: none;
+}
+
+.section:target::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -16px;
+  width: 4px;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: target-marker 2.4s ease-out forwards;
+}
+
+@keyframes target-marker {
+  0%, 60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .section h2 {
@@ -338,6 +365,11 @@ a {
   font-weight: bold;
 }
 
+.timeline-list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
 .badge {
   font-size: 11px;
   padding: 1px 6px;
@@ -387,6 +419,7 @@ a {
 .contact-link {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 12px;
   color: var(--text);
   text-decoration: none;

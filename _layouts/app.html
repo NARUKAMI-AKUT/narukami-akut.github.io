@@ -51,6 +51,24 @@ layout: default
 
 <section class="section">
   <img class="section-heading" src="{{ '/assets/images/brand/headings/changelog.png' | relative_url }}" alt="CHANGELOG">
+  {% if page.updates or page.release_date %}
+  {% for update in page.updates %}
+  <div class="timeline-item">
+    <div class="timeline-marker">
+      <div class="timeline-dot"></div>
+      {% unless forloop.last and page.release_date == nil %}<div class="timeline-line"></div>{% endunless %}
+    </div>
+    <div class="timeline-content">
+      <div class="timeline-date">{{ update.date }}</div>
+      <div class="timeline-title">アップデート</div>
+      <ul class="timeline-list">
+        {% for item in update.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
   {% if page.release_date %}
   <div class="timeline-item">
     <div class="timeline-marker">
@@ -61,6 +79,7 @@ layout: default
       <div class="timeline-title">{% if page.status == 'internal' %}配布開始{% else %}リリース{% endif %}</div>
     </div>
   </div>
+  {% endif %}
   {% else %}
   <p>準備中です。</p>
   {% endif %}
