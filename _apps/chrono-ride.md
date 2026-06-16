@@ -3,6 +3,13 @@ name: Chrono Ride
 order: 1
 status: released
 release_date: "2026-06-02"
+updates:
+  - date: "2026-06-16"
+    version: "v1.1.0"
+    items:
+      - "ライドログ機能を解放 — ライド情報の記録・CSV出力に対応"
+      - "新タイル追加（最高/最低/平均速度、最高/最低高度、上昇/下降高度合計）"
+      - "クラッシュ修正・UI修正・広告取得安定化・GPS処理共有化によるバッテリー改善"
 tagline: 走行中タッチ不要のサイクリング専用ウィジェットダッシュボード
 icon: /assets/images/chrono-ride/icon.png
 feature_graphic: /assets/images/chrono-ride/feature.png
