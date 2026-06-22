@@ -3,8 +3,10 @@ name: APx Controller
 order: 2
 status: released
 release_date: "2026-06-03"
+release_version: "v0.11.1"
 updates:
   - date: "2026-06-15"
+    version: "v0.13.1"
     items:
       - UI修正
       - Zoom機能追加

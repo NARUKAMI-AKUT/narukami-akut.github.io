@@ -3,6 +3,7 @@ name: Chrono Ride
 order: 1
 status: released
 release_date: "2026-06-02"
+release_version: "v1.0.0"
 updates:
   - date: "2026-06-16"
     version: "v1.1.0"

@@ -60,7 +60,7 @@ layout: default
     </div>
     <div class="timeline-content">
       <div class="timeline-date">{{ update.date }}</div>
-      <div class="timeline-title">アップデート</div>
+      <div class="timeline-title">アップデート{% if update.version %} <span class="timeline-version">({{ update.version }})</span>{% endif %}</div>
       <ul class="timeline-list">
         {% for item in update.items %}
         <li>{{ item }}</li>
@@ -76,7 +76,7 @@ layout: default
     </div>
     <div class="timeline-content">
       <div class="timeline-date">{{ page.release_date }}</div>
-      <div class="timeline-title">{% if page.status == 'internal' %}配布開始{% else %}リリース{% endif %}</div>
+      <div class="timeline-title">{% if page.status == 'internal' %}配布開始{% else %}リリース{% endif %}{% if page.release_version %} <span class="timeline-version">({{ page.release_version }})</span>{% endif %}</div>
     </div>
   </div>
   {% endif %}
