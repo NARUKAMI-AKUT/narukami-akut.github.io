@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in *_apps/*.md|*_layouts/*.html) BUNDLE_GEMFILE=/mnt/c/00_Claude_Code/00a_HomePage/Gemfile RUBYOPT=\"-rbundler/setup\" ./vendor/bundle/ruby/3.2.0/bin/jekyll build 2>&1 | tail -5;; esac; }",
+            "timeout": 60,
+            "statusMessage": "Jekyll build (Liquidテンプレート検証)"
+          }
+        ]
+      }
+    ]
+  }
+}
