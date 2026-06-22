@@ -3,10 +3,15 @@ name: APx Controller
 order: 2
 status: released
 release_date: "2026-06-03"
-release_version: "v0.11.1"
+release_version: "v1.0.0"
 updates:
+  - date: "2026-06-22"
+    version: "v1.2.0"
+    items:
+      - GA4機能を実装
+      - アイコン変更
   - date: "2026-06-15"
-    version: "v0.13.1"
+    version: "v1.1.0"
     items:
       - UI修正
       - Zoom機能追加
