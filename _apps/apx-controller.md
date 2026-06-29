@@ -5,6 +5,10 @@ status: released
 release_date: "2026-06-03"
 release_version: "v1.0.0"
 updates:
+  - date: "2026-06-29"
+    version: "v1.2.1"
+    items:
+      - Signal Path Setup、Sequence スタートの画面切り替え時にウィンドウ最大化が解除される不具合を修正
   - date: "2026-06-22"
     version: "v1.2.0"
     items:
