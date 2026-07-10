@@ -5,6 +5,12 @@ status: released
 release_date: "2026-06-02"
 release_version: "v1.0.0"
 updates:
+  - date: "2026-07-10"
+    version: "v1.2.1"
+    items:
+      - "走行距離が実際より多く記録されやすい問題を軽減"
+      - "アプリ起動時の広告表示を廃止"
+      - "ライド中の長押し操作を改善 — 長押しで即座に一時停止するように変更"
   - date: "2026-07-07"
     version: "v1.2.0"
     items:
@@ -31,6 +37,8 @@ screenshots:
   - /assets/images/chrono-ride/ss1.png
   - /assets/images/chrono-ride/ss2.png
   - /assets/images/chrono-ride/ss3.png
+  - /assets/images/chrono-ride/ss4.png
+  - /assets/images/chrono-ride/ss5.png
 cta_label: Google Playで見る
 cta_url: https://play.google.com/store/apps/details?id=com.chronoride.chrono_ride
 privacy_url: https://narukami-akut.github.io/chrono-ride-site/privacy_policy.html
