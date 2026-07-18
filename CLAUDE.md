@@ -37,6 +37,8 @@ GEM_HOME=vendor/bundle/ruby/3.2.0 GEM_PATH=vendor/bundle/ruby/3.2.0 \
 
 セクション見出し（"screenshots" 等）はテキストではなく `assets/images/brand/headings/` 配下のPNG画像を使用している（デザイン統一のため）。`_user_scripts/generate_section_headings.py` と `generate_app_section_headings.py` で生成できる。
 
-## コミット規約
+## テンプレート構成
 
-Conventional Commits（`feat:` / `fix:` / `style:` / `chore:` 等）。
+- `_layouts/default.html`: 全ページ共通の外枠（`<head>`、GA4トラッキング `site.google_analytics_id`、`nav.html`/`footer.html`の読込）
+- `_layouts/app.html`: `_apps/*.md`に適用されるアプリ紹介ページ専用テンプレート（hero画像・タイムライン等）
+- `_includes/nav.html` / `_includes/footer.html`: 共通ナビ・フッター
