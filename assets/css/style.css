@@ -273,11 +273,21 @@ a {
   font-size: 14px;
 }
 
+.screenshots-wrap {
+  position: relative;
+}
+
 .screenshots {
   display: flex;
   gap: 10px;
   overflow-x: auto;
-  padding-bottom: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.screenshots::-webkit-scrollbar {
+  display: none;
 }
 
 .screenshots img {
@@ -285,6 +295,63 @@ a {
   border: 1px solid var(--border);
   flex-shrink: 0;
   cursor: pointer;
+}
+
+.screenshots-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.screenshots-wrap:hover .screenshots-nav,
+.screenshots-nav:focus-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.screenshots-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.screenshots-nav::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.screenshots-nav-prev {
+  left: 8px;
+}
+
+.screenshots-nav-prev::before {
+  transform: rotate(-135deg) translate(-1px, -1px);
+}
+
+.screenshots-nav-next {
+  right: 8px;
+}
+
+.screenshots-nav-next::before {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.screenshots-nav.is-hidden {
+  display: none;
 }
 
 .lightbox {
@@ -412,6 +479,10 @@ a {
 
   .screenshots img {
     height: 200px;
+  }
+
+  .screenshots-nav {
+    display: none;
   }
 }
 

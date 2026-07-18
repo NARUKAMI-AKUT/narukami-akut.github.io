@@ -29,10 +29,14 @@ layout: default
 {% if page.screenshots %}
 <section class="section">
   <img class="section-heading" src="{{ '/assets/images/brand/headings/screenshots.png' | relative_url }}" alt="SCREENSHOTS">
-  <div class="screenshots">
-    {% for ss in page.screenshots %}
-    <img src="{{ ss | relative_url }}" alt="{{ page.name }} screenshot">
-    {% endfor %}
+  <div class="screenshots-wrap">
+    <button class="screenshots-nav screenshots-nav-prev" type="button" aria-label="前の画像"></button>
+    <div class="screenshots">
+      {% for ss in page.screenshots %}
+      <img src="{{ ss | relative_url }}" alt="{{ page.name }} screenshot">
+      {% endfor %}
+    </div>
+    <button class="screenshots-nav screenshots-nav-next" type="button" aria-label="次の画像"></button>
   </div>
 </section>
 <div class="lightbox" id="lightbox">

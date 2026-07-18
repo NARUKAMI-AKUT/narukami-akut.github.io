@@ -50,4 +50,27 @@ document.addEventListener("DOMContentLoaded", () => {
 			lightbox.classList.remove("open");
 		});
 	}
+
+	document.querySelectorAll(".screenshots-wrap").forEach((wrap) => {
+		var track = wrap.querySelector(".screenshots");
+		var prev = wrap.querySelector(".screenshots-nav-prev");
+		var next = wrap.querySelector(".screenshots-nav-next");
+		if (!track || !prev || !next) return;
+
+		var updateNav = () => {
+			var maxScroll = track.scrollWidth - track.clientWidth;
+			prev.classList.toggle("is-hidden", track.scrollLeft <= 4);
+			next.classList.toggle("is-hidden", track.scrollLeft >= maxScroll - 4);
+		};
+
+		prev.addEventListener("click", () => {
+			track.scrollBy({ left: -track.clientWidth * 0.8, behavior: "smooth" });
+		});
+		next.addEventListener("click", () => {
+			track.scrollBy({ left: track.clientWidth * 0.8, behavior: "smooth" });
+		});
+		track.addEventListener("scroll", updateNav);
+		window.addEventListener("resize", updateNav);
+		updateNav();
+	});
 });
