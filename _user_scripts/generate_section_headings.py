@@ -3,7 +3,7 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import os
 
-OUT_DIR = "/mnt/c/00_Claude_Code/06_Homepage/assets/images/brand/headings"
+OUT_DIR = "/mnt/c/00_Claude_Code/00a_HomePage/assets/images/brand/headings"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 ACCENT = (0, 188, 255, 255)
